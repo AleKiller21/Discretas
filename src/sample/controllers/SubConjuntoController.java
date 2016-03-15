@@ -59,20 +59,20 @@ public class SubConjuntoController {
 
         catch (Exception e) {
             txtResultado.setText("Ha ocurrido un error");
-            limite = 0;
+            txtNumber.clear();
         }
     }
 
     public void setLimite() {
         try {
             limite = Integer.parseInt(txtDestino.getText());
-            //tree.setSum(Integer.parseInt(txtDestino.getText()));
             txtArea.setText(txtDestino.getText());
             txtDestino.setText("");
         }
 
         catch (Exception e) {
             txtResultado.setText("Ha ocurrido un error");
+            txtDestino.clear();
         }
     }
 
