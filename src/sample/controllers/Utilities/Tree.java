@@ -7,16 +7,17 @@ public class Tree {
         public int sum;
         public String data;
 
-        public Tree()
+        public Tree(int sum)
         {
+            this.sum = sum;
             root = new Node(0,0,"",false);
             data="";
         }
 
-        public void setSum(int sum)
-        {
-            this.sum = sum;
-        }
+//        public void setSum(int sum)
+//        {
+//
+//        }
 
         private void add(Node node, int val)
         {

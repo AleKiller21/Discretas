@@ -44,10 +44,10 @@ public class SubConjuntoController {
 
     private PriorityQueue<Integer> priorityQueue;
     private Tree tree;
+    private int limite;
 
     public SubConjuntoController() {
         priorityQueue  = new PriorityQueue<>();
-        tree = new Tree();
     }
 
     public void addNumber() {
@@ -59,12 +59,14 @@ public class SubConjuntoController {
 
         catch (Exception e) {
             txtResultado.setText("Ha ocurrido un error");
+            limite = 0;
         }
     }
 
     public void setLimite() {
         try {
-            tree.setSum(Integer.parseInt(txtDestino.getText()));
+            limite = Integer.parseInt(txtDestino.getText());
+            //tree.setSum(Integer.parseInt(txtDestino.getText()));
             txtArea.setText(txtDestino.getText());
             txtDestino.setText("");
         }
@@ -76,10 +78,12 @@ public class SubConjuntoController {
 
     public void calculate() {
 
+        tree = new Tree(limite);
         tree.insert(priorityQueue);
 
         try {
             txtResultado.setText(tree.getData());
+            priorityQueue.addAll(listNumbers.getItems());
         }
 
         catch (Exception e) {
@@ -93,6 +97,7 @@ public class SubConjuntoController {
         txtArea.clear();
         txtResultado.clear();
         listNumbers.setItems(null);
+        priorityQueue.clear();
     }
 
     @FXML
