@@ -143,62 +143,67 @@ public class BaseConversionController {
     }
     
     private void ConvertNumber(String number, String op1, String op2){
-        System.out.println("Entro");
-    	String option = op1+"-"+op2;
-    	String result = "";
+        try {
+			String option = op1+"-"+op2;
+			String result = "";
 
-    	
-    	switch(option){
-    	case "Hexadecimal-Binario":
-    								result = this.HextoBinary(number);
-    								break;
-    	case "Hexadecimal-Decimal":
-    								result = this.toDecimal(number, 16)+"";
-    								break;
-    	case "Hexadecimal-Octal":
-    								result = this.HexToOctal(number);
-    								break;
-    	case "Binario-Hexadecimal":
-    								if(Integer.toString(Integer.parseInt(number)).matches("[01]*"))
-    									result = this.BinarytoHex(number)+"";
-    								break;
-    	case "Binario-Decimal":
-    								if(Integer.toString(Integer.parseInt(number)).matches("[01]*"))
-    									result = this.toDecimal(number, 2)+"";
-    								break;
-    	case "Binario-Octal":
-    								if(Integer.toString(Integer.parseInt(number)).matches("[01]*"))
-    									result = this.BinaryToOct(number);
-    								break;
-    	case "Decimal-Hexadecimal":
-    								result = this.DectoHex(Integer.parseInt(number));
-    								break;
-    	case "Decimal-Binario":
-    								int num = Integer.parseInt(number);
-    								result = this.DectoBinary(num, 0)+"";
-    								break;
-    	case "Decimal-Octal":
-    								result = this.DectoOctal(Integer.parseInt(number));
-    								break;
-    	case "Octal-Decimal":	
-    								if(number.matches("[8-9]+"))
-    									break;
-    								result = this.OctalToDec(number)+"";
-    								break;
-    	case "Octal-Binario":
-						    		if(number.matches("[8-9]+"))
-										break;
-    								result = this.OctalToBin(number);
-    								break;
-    	case "Octal-Hexadecimal":
-						    		if(number.matches("[8-9]+"))
-										break;
-    								result = this.OctalToHex(number);
-    								break;
- 
-    	}
-        
-        resultext.setText(result);
+
+			switch(option){
+				case "Hexadecimal-Binario":
+					result = this.HextoBinary(number);
+					break;
+				case "Hexadecimal-Decimal":
+					result = this.toDecimal(number, 16)+"";
+					break;
+				case "Hexadecimal-Octal":
+					result = this.HexToOctal(number);
+					break;
+				case "Binario-Hexadecimal":
+					if(Integer.toString(Integer.parseInt(number)).matches("[01]*"))
+						result = this.BinarytoHex(number)+"";
+					break;
+				case "Binario-Decimal":
+					if(Integer.toString(Integer.parseInt(number)).matches("[01]*"))
+						result = this.toDecimal(number, 2)+"";
+					break;
+				case "Binario-Octal":
+					if(Integer.toString(Integer.parseInt(number)).matches("[01]*"))
+						result = this.BinaryToOct(number);
+					break;
+				case "Decimal-Hexadecimal":
+					result = this.DectoHex(Integer.parseInt(number));
+					break;
+				case "Decimal-Binario":
+					int num = Integer.parseInt(number);
+					result = this.DectoBinary(num, 0)+"";
+					break;
+				case "Decimal-Octal":
+					result = this.DectoOctal(Integer.parseInt(number));
+					break;
+				case "Octal-Decimal":
+					if(number.matches("[8-9]+"))
+						break;
+					result = this.OctalToDec(number)+"";
+					break;
+				case "Octal-Binario":
+					if(number.matches("[8-9]+"))
+						break;
+					result = this.OctalToBin(number);
+					break;
+				case "Octal-Hexadecimal":
+					if(number.matches("[8-9]+"))
+						break;
+					result = this.OctalToHex(number);
+					break;
+
+			}
+
+			resultext.setText(result);
+		}
+
+        catch(Exception ex) {
+            resultext.setText("El valor ingresado no esta en el formato correcto");
+        }
     }
 
 
