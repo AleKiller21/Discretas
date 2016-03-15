@@ -17,18 +17,22 @@ public class MenuController {
     }
 
     public void showEuclideAlgorithm() throws Exception {
-        showDisplay("dialogs/Euclide.fxml", "Algoritmo de Euclide");
+        showDisplay("dialogs/Euclide.fxml", "Algoritmo de Euclide", 850, 471);
     }
 
-    private void showDisplay(String dialog, String title) throws Exception {
+    public void showBaseConversion() throws Exception {
+        showDisplay("dialogs/BaseConversion.fxml", "Base-Converter", 600, 400);
+    }
+
+    private void showDisplay(String dialog, String title, int width, int height) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource(dialog));
         this.dialog.setTitle(title);
-        this.dialog.setMinHeight(471);
-        this.dialog.setMinWidth(850);
-        this.dialog.setMaxHeight(471);
-        this.dialog.setMaxWidth(850);
+        this.dialog.setMinHeight(height);
+        this.dialog.setMinWidth(width);
+        this.dialog.setMaxHeight(height);
+        this.dialog.setMaxWidth(width);
         this.dialog.setResizable(false);
-        this.dialog.setScene(new Scene(root, 674, 404));
+        this.dialog.setScene(new Scene(root, width, height));
         this.dialog.showAndWait();
     }
 }
