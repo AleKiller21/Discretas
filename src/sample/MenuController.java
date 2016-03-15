@@ -27,6 +27,10 @@ public class MenuController {
         showDisplay("dialogs/SubConjunto.fxml", "Sub Conjunto",800,600);
     }
 
+    public void showDivision() throws Exception {
+        showDisplay("dialogs/Division.fxml", "Algoritmo Division", 600, 400);
+    }
+
     private void showDisplay(String dialog, String title, int width, int height) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource(dialog));
         this.dialog.setTitle(title);

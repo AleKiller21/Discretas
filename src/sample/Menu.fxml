@@ -31,5 +31,13 @@
             <Insets top="20.0" />
          </VBox.margin>
       </Button>
+      <Button alignment="CENTER" layoutX="10.0" layoutY="194.0" mnemonicParsing="false" onAction="#showDivision" prefHeight="67.0" prefWidth="600.0" text="Algoritmo Division">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Button>
    </children>
 </VBox>
