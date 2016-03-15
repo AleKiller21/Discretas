@@ -3,7 +3,6 @@ package sample;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -22,6 +21,10 @@ public class MenuController {
 
     public void showBaseConversion() throws Exception {
         showDisplay("dialogs/BaseConversion.fxml", "Base-Converter", 600, 400);
+    }
+
+    public void showSubConjunto() throws Exception {
+        showDisplay("dialogs/SubConjunto.fxml", "Sub Conjunto",800,600);
     }
 
     private void showDisplay(String dialog, String title, int width, int height) throws Exception {

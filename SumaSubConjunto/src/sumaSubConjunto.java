@@ -107,24 +107,24 @@ public class sumaSubConjunto {
 	    }
 	}
 	
-	public static void main(String[] args) {
-		Tree tree = new Tree(500);
-	    PriorityQueue<Integer> v = new PriorityQueue<Integer>();
-	    v.add(44);//30
-	    v.add(54);
-	    v.add(66);
-	    v.add(84);
-	    v.add(126);
-	    v.add(138);
-	    v.add(144);
-	    v.add(162);
-	    v.add(182);//288
-	    v.add(318);
-	    v.add(336);
-	    v.add(456);
-
-	    tree.insert(v);
-//	    tree.inOrder();
-	    System.out.println(tree.getData());
-	}
+//	public static void main(String[] args) {
+//		Tree tree = new Tree(500);
+//	    PriorityQueue<Integer> v = new PriorityQueue<Integer>();
+//	    v.add(44);//30
+//	    v.add(54);
+//	    v.add(66);
+//	    v.add(84);
+//	    v.add(126);
+//	    v.add(138);
+//	    v.add(144);
+//	    v.add(162);
+//	    v.add(182);//288
+//	    v.add(318);
+//	    v.add(336);
+//	    v.add(456);
+//
+//	    tree.insert(v);
+////	    tree.inOrder();
+//	    System.out.println(tree.getData());
+//	}
 }

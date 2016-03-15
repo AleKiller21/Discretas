@@ -23,5 +23,13 @@
             <Insets top="20.0" />
          </VBox.margin>
       </Button>
+      <Button fx:id="btnSubConjunto" alignment="CENTER" layoutX="10.0" layoutY="107.0" mnemonicParsing="false" onAction="#showSubConjunto" prefHeight="67.0" prefWidth="600.0" text="Sub Conjunto - Algoritmo Division">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </Button>
    </children>
 </VBox>
