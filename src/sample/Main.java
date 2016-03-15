@@ -12,7 +12,12 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("Menu.fxml"));
         primaryStage.setTitle("Discretas - Heroes' Guild");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        primaryStage.setMinHeight(400);
+        primaryStage.setMinWidth(600);
+        primaryStage.setMaxHeight(400);
+        primaryStage.setMaxWidth(600);
+        primaryStage.setResizable(false);
+        primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
     }
 
