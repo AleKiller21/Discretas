@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="Programas:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/Programas_jar</output-path>
-    <root id="archive" name="Programas.jar">
-      <element id="module-output" name="Programas" />
-    </root>
-  </artifact>
-</component>
